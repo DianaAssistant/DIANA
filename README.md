@@ -19,7 +19,7 @@ A voice/text controlled AI assistant that learns from its user usage of iOS/Andr
 
 ## Architecture
 
-User :older_woman: runs an [app](#UnrealRDPClient) on device :robot: :apple: :phone: :computer: :glasses: . It connects to server :server: that runs [broker service](#PurposeRemoteDesktopSessionWebBroker). User :older_woman:  presses "start new session" button. App asks him about purpose of the session. After response, RDP session from user :older_woman: device to remote :robot: Android :phone:  phone running [RDP server that shows camera feed and translates mouse/key commands](#AndroidCameraUSBGadgetRDPServer) to the USB connected to the :apple: :phone: iOS device as USB peripheral.
+User :older_woman: runs an [app](#UnrealRDPClient) on device :robot: :apple: :iphone: :computer: :eyeglasses: . It connects to server :cloud: that runs [broker service](#PurposeRemoteDesktopSessionWebBroker). User :older_woman:  presses "start new session" button. App asks him about purpose of the session. After response, RDP session from user :older_woman: device to remote :robot: Android :iphone:  phone running [RDP server that shows camera feed and translates mouse/key commands](#AndroidCameraUSBGadgetRDPServer) to the USB connected to the :apple: :iphone: iOS device as USB peripheral.
 
 
 ### Components
