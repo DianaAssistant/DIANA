@@ -1,6 +1,16 @@
 # VoiceTextControlledGUI
 `git@github.com:DianaAssistant/VoiceTextControlledGUI.git`
 
+A voice/text controlled AI assistant that learns from its user usage of iOS/Android devices
+
+## Scenarios
+
+### Order food
+
+### Buy airplane tickets
+
+### Buy cheapest USB hub
+
 ### Components
 
 #### [MLRemoteComputingSessionWebLogger](https://github.com/DianaAssistant/MLRemoteComputingSessionWebLogger) [ :octocat:](x-github-client://openRepo/https://github.com/DianaAssistant/MLRemoteComputingSessionWebLogger)
