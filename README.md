@@ -14,6 +14,11 @@ Remote Desktop Session Web Broker that asks user for purpose of session and clea
 #### UnrealTextureOCR 
 UnrealTextureOCR: windows, hololens 2, android
 
+#### UnrealRDPClient 
+windows/iphone/iPad/android/hololens 2 RDP client with support of public servers though public server broker
+
+#### AndroidCameraUSBGadgetRDPServer 
+RPD server running on android presenting view from camera, transfering keypresses and mouse movements via tejado/android-usb-gadget just like tejado/Authorizer
 
 ### Deps
 #### UnrealRDPClient 
