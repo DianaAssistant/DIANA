@@ -2,7 +2,7 @@
 
 ### Components
 
-#### [MLRemoteComputingSessionWebLogger](https://github.com/DianaAssistant/MLRemoteComputingSessionWebLogger) [repo :octocat:](x-github-client://openRepo/https://github.com/DianaAssistant/MLRemoteComputingSessionWebLogger)
+#### [MLRemoteComputingSessionWebLogger](https://github.com/DianaAssistant/MLRemoteComputingSessionWebLogger) [repo :octocat:](git://github.com/DianaAssistant/MLRemoteComputingSessionWebLogger.git)
 A web server that provides an endpoint for UnrealMLRemoteComputingSessionWebLogger for logging an OCRed remote session over HTTP and saves it in Python readable ML friendly format, together with correct timestamps of session recorded by redemption RDP proxy server
 
 ##### [UnrealMLRemoteComputingSessionWebLogger](https://github.com/DianaAssistant/MLRemoteComputingSessionWebLogger/UnrealMLRemoteComputingSessionWebLogger.md)
