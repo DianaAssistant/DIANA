@@ -22,6 +22,9 @@ A voice/text controlled AI assistant that learns from its user usage of iOS/Andr
 User :older_woman: runs an [app](#UnrealRDPClient) on device :robot: :apple: :iphone: :computer: :eyeglasses: . It connects to server :cloud: that runs [broker service](#PurposeRemoteDesktopSessionWebBroker). User :older_woman:  presses "start new session" button. App asks him about purpose of the session. After response, RDP session from user :older_woman: device to remote :robot: Android :iphone:  phone running [RDP server that shows camera feed and translates mouse/key commands](#AndroidCameraUSBGadgetRDPServer) to the USB connected to the :apple: :iphone: iOS device as USB peripheral.
 
 
+All user :older_woman: actions are logged.   After session is ended, user :older_woman: is presented with choice of storing session as routine. User :older_woman: is offered with a choice of marking parameters in session description as a typed wildcards.
+
+
 ### Components
 
 #### [MLRemoteComputingSessionWebLogger](https://github.com/DianaAssistant/MLRemoteComputingSessionWebLogger) [ :octocat:](x-github-client://openRepo/https://github.com/DianaAssistant/MLRemoteComputingSessionWebLogger)
