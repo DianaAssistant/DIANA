@@ -17,6 +17,10 @@ A voice/text controlled AI assistant that learns from its user usage of iOS/Andr
 
 ### Login into Google Accounts
 
+## Architecture
+
+User :user: runs an [app](#UnrealRDPClient) on device :iphone: :computer: :glasses: . It connects to server :server: that runs [broker service](#PurposeRemoteDesktopSessionWebBroker). User presses "start new session" button. App asks him about purpose of the session. After response, RDP session from user device to remote Adroid phone running [RDP server that shows camera feed and translates mouse/key commands](#AndroidCameraUSBGadgetRDPServer) to the USB connected to the iOS device as USB peripheral.
+
 
 ### Components
 
@@ -27,6 +31,8 @@ A voice/text controlled AI assistant that learns from its user usage of iOS/Andr
 A web server that provides an endpoint for UnrealMLRemoteComputingSessionWebLogger for logging an OCRed remote session over HTTP and saves it in Python readable ML friendly format, together with correct timestamps of session recorded by redemption RDP proxy server
 
 ##### [UnrealMLRemoteComputingSessionWebLogger](https://github.com/DianaAssistant/MLRemoteComputingSessionWebLogger/UnrealMLRemoteComputingSessionWebLogger.md)
+
+todo: check if redemption is logging, if yes possibly drop it
 
 #### [PurposeRemoteDesktopSessionWebBroker](https://github.com/DianaAssistant/PurposeRemoteDesktopSessionWebBroker) [ :octocat:](x-github-client://openRepo/https://github.com/DianaAssistant/PurposeRemoteDesktopSessionWebBroker)
 `git@github.com:DianaAssistant/PurposeRemoteDesktopSessionWebBroker.git`
