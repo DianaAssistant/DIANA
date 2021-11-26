@@ -24,6 +24,8 @@ User :older_woman: runs an [app](#UnrealRDPClient) on device :robot: :apple: :ip
 
 All user :older_woman: actions are logged.   After session is ended, user :older_woman: is presented with choice of storing session as routine. User :older_woman: is offered with a choice of marking parameters in session description as a typed wildcards.
 
+In future, if user :older_woman: starts a new session and sets its purpose to be similiar as purposes of sessions of the past, [app](#UnrealRDPClient)  :robot: :apple: :iphone: :computer: :eyeglasses: will give user :older_woman: an option to execute stored routine for user.
+
 
 ### Components
 
