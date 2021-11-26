@@ -11,6 +11,13 @@ A voice/text controlled AI assistant that learns from its user usage of iOS/Andr
 
 ### Buy cheapest USB hub
 
+### Create calendar event with given parameters
+
+### Setup a new device using provided Wifi credentials
+
+### Login into Google Accounts
+
+
 ### Components
 
 #### [MLRemoteComputingSessionWebLogger](https://github.com/DianaAssistant/MLRemoteComputingSessionWebLogger) [ :octocat:](x-github-client://openRepo/https://github.com/DianaAssistant/MLRemoteComputingSessionWebLogger)
