@@ -2,6 +2,10 @@
 RemoteDesktopCaptureMLConverter
 
 
+## OCR project in ReDemPtion
+
+[link](https://github.com/DianaAssistant/redemption/tree/future/projects/ocr1)
+
 ## From [redemption](https://github.com/DianaAssistant/redemption/README.md#Convert .mwrm/.wrm capture to video)
 ### Convert .mwrm/.wrm capture to video
 
@@ -10,3 +14,5 @@ RemoteDesktopCaptureMLConverter
     redrec -f --video-codec mp4 -i file.mwrm -o output_prefix
 
 Note: `rdpproxy --print-default-ini` show a default ini file.
+
+
