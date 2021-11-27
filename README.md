@@ -37,18 +37,32 @@ In future, if user :older_woman: starts a new session and sets its purpose to be
 
 native format (capture=2 in RDP.ini file as per ReDemPtion readme) to ML (numpy readable csv containing OCRed ui elements coordinates and text in key frames + user actions clumped together, everything timeframed) conventer. Uses keyboard entered &&&&for session purpose notation@@@@
 
-#### [PurposeRemoteDesktopSessionWebBroker](https://github.com/DianaAssistant/PurposeRemoteDesktopSessionWebBroker) [ :octocat:](x-github-client://openRepo/https://github.com/DianaAssistant/PurposeRemoteDesktopSessionWebBroker)
-`git@github.com:DianaAssistant/PurposeRemoteDesktopSessionWebBroker.git`
+#### [UnrealRDPUILoggingOverlay]
 
+an Unreal app that proxies RDP and on keystroke presents user with interface overlay containing some UWidgets including buttons, radio buttons, checkmarks and Text fields. each state change of UWidgets should be logged together with UnrealReDemption logging 
 
-Remote Desktop Session Web Broker that asks user for purpose of session and cleans up after the session. saves preserves state of the physical device.
+Built with: UnrealReDemPtion
+
+#### [DianaUILoggingOverlay]
+
+text field "objective" 
+button wirh marker that makes cursor look like marker, then OCRs selected text and adds it onto clipboard stack
+button remove text from stack and paste
+button paste text from stack
+keybindings (on joystick)
 
 
 #### [UnrealRDPClient](https://github.com/DianaAssistant/UnrealRDPClient) [ :octocat:](x-github-client://openRepo/https://github.com/DianaAssistant/UnrealRDPClient)
 `git@github.com:DianaAssistant/UnrealRDPClient.git`
 
 
-windows/iphone/iPad/android/hololens 2 RDP client with support of public servers though public server broker
+windows/iphone/iPad/android/hololens 2 RDP client
+
+Built with: UnrealReDemPtion
+
+#### UnrealReDemPtion
+Unreal plugin that starts an RDP proxy, draws remote display on texture/actor , passes an Unreal camera view texture through, catches clicks and keystrokes with Unreal UI
+
 
 
 #### [AndroidCameraUSBGadgetRDPServer](https://github.com/DianaAssistant/AndroidCameraUSBGadgetRDPServer) [ :octocat:](x-github-client://openRepo/https://github.com/DianaAssistant/AndroidCameraUSBGadgetRDPServer)
