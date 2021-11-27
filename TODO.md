@@ -8,6 +8,12 @@
 - rdp
 - connected rooted android
 
+#### ml pipeline
+
+https://docs.nvidia.com/cuda/wsl-user-guide/index.html
+
+https://docs.metaflow.org/v/r/getting-started/install
+
 ### mbp
 
 - connected iphone with assistance enabled
