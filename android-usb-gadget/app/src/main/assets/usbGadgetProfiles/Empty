@@ -1,0 +1,27 @@
+#!/bin/sh
+
+CONFIGFS_DIR="/config"
+GADGETS_PATH="${CONFIGFS_DIR}/usb_gadget"
+
+GADGET="gadget_${RANDOM}"
+GADGET_PATH=${GADGETS_PATH}/${GADGET}
+
+CONFIG_PATH="$GADGET_PATH/configs/c.1/"
+STRINGS_PATH="$GADGET_PATH/strings/0x409/"
+
+mkdir -p $CONFIG_PATH
+mkdir -p $STRINGS_PATH
+
+
+cd $GADGET_PATH
+echo 0x046a > idVendor
+echo 0x002a > idProduct
+
+cd $STRINGS_PATH
+echo "tejado" > manufacturer
+echo "Android USB Gadget" > product
+echo "42" > serialnumber
+
+cd $CONFIG_PATH
+echo 120 > MaxPower
+echo "Configuration" > strings/0x409/configuration
