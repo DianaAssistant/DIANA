@@ -1,194 +1,125 @@
 # OCR
 
-- Comment faire l'apprentissage sur un (nouveau) jeu de caractères ?
-Les définitions de caractères sont dans learn.ok sous la forme de fichiers images .pbm
-Les fichier .txt associé correspond au texte présent dans l'image.
-Chaque caractères ou ensemble de caractères est séparer par un espace.
-Note: '\' est un caractère d'échapement, le doubler pour le prendre en compte.
+- How to learn on a (new) character set?
+Character definitions are in learn.ok as .pbm image files
+The associated .txt file corresponds to the text in the image.
+Each character or set of characters is separated by a space.
+Note: '\' is an escape character, double it to take it into account.
 
-- Quel est la procédure de génération du module de reconnaissance de caractères ?
+- What is the procedure for generating the character recognition module?
 $ `make`
-cette commande génère des fichier **.hxx** et les dossiers `classifiers` et `fonts`.
-Les fichiers `{,classifiers/}*.hxx` sont utilisé par l'ocr.
+this command generates **. hxx ** files and the `classifiers` and` fonts` folders.
+The `{, classifiers /} *. Hxx` files are used by the OCR.
 
-/!\ **Ne pas oublier de modifier** `whitespace_width` **lorsqu'une police est ajoutée**.
+/! \ ** Don't forget to modify ** `whitespace_width` ** when a font is added **.
 
-En cas d'erreurs avec learning, display_learning permet de voir les caractères extrait.
+In case of errors with learning, display_learning allows you to see the extracted characters.
 
-- Comment lancer la reconnaissance de caractères sur une image fixe ?
-Utiliser le programme extract_text. Celui-ci ne supporte que que les extensions ppm.
-Note: Il existe des programmes comme bmptoppm ou pngtopnm dans le gestionnaire de paquets
-(`pngtopnm file.png > file.pbm`).
+- How to start character recognition on a still image?
+Use the extract_text program. This only supports ppm extensions.
+Note: There are programs like bmptoppm or pngtopnm in the package manager
+(`pngtopnm file.png> file.pbm`).
 
 
 
 # BUGS
 
-Certains caractères sont reconnu en tant que plusieurs caractères.
-(par exemple `ï` en Tahoma est reconnu en tant que  `.i.`).
-Ceci est un "bug" de learning et la classification d'un tel caractère ammène une erreur.
+Some characters are recognized as multiple characters.
+(for example `ï` in Tahoma is recognized as` .i.`).
+This is a learning "bug" and the classification of such a character leads to an error.
 
-Pour corriger le problème un fichier `nom_de_la_police.repl` doit être créé dans learn.ok.
-Celui-ci contient les caractères de remplacement (code c++):
+To correct the problem a file `font_name.repl` must be created in learn.ok.
+This contains the replacement characters (c ++ code):
 
-`{"sequence à trouver", "séquence de remplacement"},`
+`{" sequence to find "," replacement sequence "},`
 
 
 
-# Win 2012 et smoothing
+# Win 2012 and smoothing
 
 `tools/ocr/img_win2012_smoothing_to_monochrome input_image output_image`
-  transforme une image de barre de titre windows2012 standard en une image noir et blanc
+  transforms a standard windows2012 title bar image to a black and white image
 
 `tools/ocr/img_win2012_smoothing_to_monochrome_d input_images`
-  prend plusieurs fichier en paramètre et appel le script precédent avec une extension
-  de sortie en .monochrome + en .pbm + un fichier .txt contenant le nom du fichier (il
-  faut que le fichier soit nommé par les lettres dans l'image avec un espace séparateur
-  entre chaque).
-  À noter qu'il faut etre dans le dossier des images car le chemin complet est utilisé
-  comme texte dans le fichier .txt
+  takes several files as parameters and calls the previous script with an extension
+  output in .monochrome + in .pbm + a .txt file containing the name of the file (it
+  the file must be named by the letters in the image with a separator space
+  between each).
+  Note that it must be in the images folder because the full path is used
+  as text in .txt file
 
-(Note: les couleurs en rdp et vnc sont différentes, pour avoir la liste complète des
-couleurs consitutant une image: `identify -verbose -unique mon_image`.)
+(Note: the colors in rdp and vnc are different, to have the complete list of
+colors constituting an image: `identify -verbose -unique mon_image`.)
 
-Questions OCR (OBSOLETE)
+OCR questions (OBSOLETE)
 -----------------------
 
-- Qu'est-ce que Milena ?
+- What is Milena?
 
-Milena est une bibliothèque générique de traitement d'image développée par le LRDE
-(laboratoire de recherche dépendant de l'Epita). Milena fait partie du projet
-Olena, et c'est aussi le nom des bibliothèques core d'Olena.
+Milena is a generic image processing library developed by LRDE
+(research laboratory dependent on Epita). Milena is part of the project
+Olena, and that's also the name of Olena's core libraries.
 
-- Quels sont les codes livrés par l'Epita spécifiques à notre projet ?
+- What are the codes delivered by Epita specific to our project?
 
-La livraison de l'epita pour redemption comporte:
-- Un Makefile -> a merger dans le Jamroot de redemption
-- des fichiers README et INSTALL intégrés à OCR.txt (ce fichier) et supprimés.
+The delivery of epita for redemption includes:
+- A Makefile -> to merge in the redemption Jamroot
+- README and INSTALL files integrated into OCR.txt (this file) and deleted.
 
-- les jeux de définition de caractères : dossier learn.ok
+- character definition sets: learn.ok folder
 
-- les fichiers source python suivants:
+- the following python source files:
 
-cart.py -> utilisé par classifieur
-gen_classifier.py -> crée l'include classifier.hxx utilisé par classfier.hh
- gen_classifier utilise le contenu de features.txt, lui même construit à
- partir du contenu du dossier learn à l'aide du programme learning.
+cart.py -> used by classifier
+gen_classifier.py -> create the include classifier.hxx used by classfier.hh
+ gen_classifier uses the content of features.txt, itself built from
+ from the contents of the learn folder using the learning program.
 
-- les sources C++ suivant
+- the following C ++ sources
 
 classification.hh
 classifier.hh
-extract_bars.hh -> extraction des barres de titre d'une image
+extract_bars.hh -> extract title bars from an image
 extract_text.cc
-extract_text.hh -> extraction du texte contenu dans les barres de titre
-learning.cc -> exploite le contenu de learn (image pbm et codes caractères) pour
-            créer le fichier features.txt utilisé par gen_classifier.py
+extract_text.hh -> extract the text contained in the title bars
+learning.cc -> uses the content of learn (pbm image and character codes) to
+            create the features.txt file used by gen_classifier.py
 
 
-- Quels sont les codes générique Milena utilisés ?
+- What are the generic Milena codes used?
 
-L'OCR utilise la version de milena contenue dans le dossier milena, c'est à peu
-de choses près [différences ?] la même chose que le contenu du dossier milena
-de olena-1.0. L'archive olena-1.0 est conservée dans le dossier à titre de
-référence, mais pas directement utilisée lors de la phase de compilation.
+The OCR uses the version of milena contained in the milena file, that is to say
+things close [differences?] the same as the contents of the milena folder
+by olena-1.0. The olena-1.0 archive is kept on file as a
+reference, but not directly used during the compilation phase.
 
-- Où sont les fichiers de définition de jeux de caractères ?
+- Where are the character set definition files?
 
-- Comment faire l'apprentissage sur un (nouveau) jeu de caractères ?
+- How to learn on a (new) character set?
 
-Les définitions de caractères sont dans learn (lien vers learn.ok) sous la forme
-de fichiers images .pbm
-Les fichier .txt associé correspond au texte présent dans l'image.
-Chaque caractères ou ensemble de caractères est séparer par un espace.
-Note: '\' est un caractère d'échapement, le doubler pour le prendre en compte.
+Character definitions are in learn (link to learn.ok) in the form
+.pbm image files
+The associated .txt file corresponds to the text in the image.
+Each character or set of characters is separated by a space.
+Note: '\' is an escape character, double it to take it into account.
 
-- Quel est la procédure de génération du module de reconnaissance de caractères ?
-make apprentissage
+- What is the procedure for generating the character recognition module?
+make learning
 
-- Comment compiler Redemption avec le support de l'OCR ?
+- How to compile Redemption with OCR support?
 
-- Comment lancer la reconnaissance de caractères sur une image fixe ?
-voir à "make test".
+- How to start character recognition on a still image?
+see "make test".
 
-- Comment appeler la reconnaissance de caractères depuis un buffer ?
+- How to call character recognition from a buffer?
 
 
 
-README ORIGINEL (OBSOLETE)
+ORIGINAL README (OBSOLETE)
 --------------------------
 
-Commandes:
-+ make all: compilation du programme et apprentissage.
-+ make apprentissage: apprentissage seul à partir des fichiers dans
+Orders:
++ make all: compilation of the program and training.
++ make learning: learning only from files in
 "learn"
-+ make test: lancement de la procédure de test. Tout les screens se
-trouvant dans le dossier "train" sont analysés puis traduit en texte.
-+ make dist: génère une archive de rendu.
-
-
-* extract_bars:
-Détection des lignes de titres.
-
-** Input: un screenshot ppm
-** Output: plusieurs images titres pbm.
-** Principe:
-   + Calcul de composantes alpha-connexes à une couleur réference
-   (alpha-connexion permet de gérer le dégradé)
-   + Reconstruction de l'image ou on met en blanc le texte (est
-   considéré comme texte tout ce qui est proche du blanc (pour l'aliasing)
-
-
-* classify:
-Découpage des caractères et classification.
-
-** Input: une barre de titre
-** Output: le texte du titre
-** Principe:
-   + calculs des composantes connexes et attributs (bbox, aire)
-   + merge des composantes qui ont des points communs lors de la
-   projection sur x (permet de gérer les accents)
-   + classification
-
-* classifier.cc_:
-  L'arbre de décision généré.
-
-* gen_classifier.py, cart.py:
-  Construction de l'arbre de décision.
-  Il faut mettre des fichiers pbm et leurs traductions dans le dossier
-  "learn". Ensuite "make apprentissage" s'occupe de créer l'arbre de
-  décision et créer le code c++ correspondant dans le fichier classifier.cc_.
-
-* test.sh:
-  Mettre tout plein de fichiers dans "train" et regarder les résultats
-  dans "output"
-
-
-* utilitaire
-
- recode utf-8..latin-1 < tmp > tmp2
-
-
- INSTALL ORIGINEL (OBSOLETE)
- ---------------------------
-
- INSTALLATION
-
-	Instructions
-
-I. Milena
-
-1. Telecharger et installer milena
-2. Modifier le makefile courrant pour indiquer le chemin de milena
-3. Realiser l'apprentissage:
-   make apprentissage
-
-
-II. Integration
-
-1. Aller dans le repertoire de redemption et compiler.
-   cd integration
-   make
-2. Configurer utils/authhook.py puis
-   python ./utils/authhook.py
-   ./rdpproxy
++ make test: launch of the test procedure. All screens are
