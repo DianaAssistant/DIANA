@@ -24,15 +24,9 @@ User :user: runs an [app](#UnrealRDPClient) on device :iphone: :computer: :glass
 
 ### Components
 
-#### [MLRemoteComputingSessionWebLogger](https://github.com/DianaAssistant/MLRemoteComputingSessionWebLogger) [ :octocat:](x-github-client://openRepo/https://github.com/DianaAssistant/MLRemoteComputingSessionWebLogger)
-`git@github.com:DianaAssistant/MLRemoteComputingSessionWebLogger.git`
+#### RemoteDesktopCaptureMLConverter
 
-
-A web server that provides an endpoint for UnrealMLRemoteComputingSessionWebLogger for logging an OCRed remote session over HTTP and saves it in Python readable ML friendly format, together with correct timestamps of session recorded by redemption RDP proxy server
-
-##### [UnrealMLRemoteComputingSessionWebLogger](https://github.com/DianaAssistant/MLRemoteComputingSessionWebLogger/UnrealMLRemoteComputingSessionWebLogger.md)
-
-todo: check if redemption is logging, if yes possibly drop it
+native format (capture=2 in RDP.ini file as per ReDemPtion readme) to ML (numpy readable csv containing OCRed ui elements coordinates and text in key frames + user actions clumped together, everything timeframed) conventer. Uses keyboard entered &&&&for session purpose notation@@@@
 
 #### [PurposeRemoteDesktopSessionWebBroker](https://github.com/DianaAssistant/PurposeRemoteDesktopSessionWebBroker) [ :octocat:](x-github-client://openRepo/https://github.com/DianaAssistant/PurposeRemoteDesktopSessionWebBroker)
 `git@github.com:DianaAssistant/PurposeRemoteDesktopSessionWebBroker.git`
