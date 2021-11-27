@@ -1,5 +1,5 @@
-# VoiceTextControlledGUI
-`git@github.com:DianaAssistant/VoiceTextControlledGUI.git`
+# DIANA
+`git@github.com:DianaAssistant/DIANA.git`
 
 A voice/text controlled AI assistant that learns from its user usage of iOS/Android devices
 
