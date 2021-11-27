@@ -1,0 +1,3 @@
+[submodule "modules/ppocr"]
+	path = modules/ppocr
+	url = ../ppocr.git
