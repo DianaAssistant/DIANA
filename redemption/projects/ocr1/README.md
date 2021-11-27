@@ -1,23 +1,36 @@
 # OCR
 
-- How to learn on a (new) character set?
+## How to learn on a (new) character set?
+
 Character definitions are in learn.ok as .pbm image files
+
 The associated .txt file corresponds to the text in the image.
+
 Each character or set of characters is separated by a space.
+
 Note: '\' is an escape character, double it to take it into account.
 
-- What is the procedure for generating the character recognition module?
-$ `make`
-this command generates **. hxx ** files and the `classifiers` and` fonts` folders.
+## What is the procedure for generating the character recognition module?
+
+```make```
+
+this command generates **. hxx ** files and the `classifiers` and `fonts` folders.
+
 The `{, classifiers /} *. Hxx` files are used by the OCR.
+
 
 /! \ ** Don't forget to modify ** `whitespace_width` ** when a font is added **.
 
-In case of errors with learning, display_learning allows you to see the extracted characters.
 
-- How to start character recognition on a still image?
-Use the extract_text program. This only supports ppm extensions.
-Note: There are programs like bmptoppm or pngtopnm in the package manager
+
+In case of errors with learning, `display_learning` allows you to see the extracted characters.
+
+##  How to start character recognition on a still image?
+
+Use the `extract_text` program. This only supports `ppm` extensions.
+
+Note: There are programs like `bmptoppm` or `pngtopnm` in the package manager
+
 (`pngtopnm file.png> file.pbm`).
 
 
