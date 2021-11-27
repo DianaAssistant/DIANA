@@ -66,7 +66,7 @@ colors constituting an image: `identify -verbose -unique mon_image`.)
 
 OCR questions (OBSOLETE)
 -----------------------
-
+```
 - What is Milena?
 
 Milena is a generic image processing library developed by LRDE
@@ -126,13 +126,17 @@ see "make test".
 
 - How to call character recognition from a buffer?
 
-
+```
 
 ORIGINAL README (OBSOLETE)
 --------------------------
+
+```
 
 Orders:
 + make all: compilation of the program and training.
 + make learning: learning only from files in
 "learn"
 + make test: launch of the test procedure. All screens are
+
+```
