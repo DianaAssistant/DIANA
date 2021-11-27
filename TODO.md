@@ -34,5 +34,5 @@ try ocr
 
 ## android usb tool
 
-make authorizer run 
+make authorizer run  https://github.com/tejado/Authorizer
 
