@@ -43,11 +43,6 @@ native format (capture=2 in RDP.ini file as per ReDemPtion readme) to ML (numpy 
 
 Remote Desktop Session Web Broker that asks user for purpose of session and cleans up after the session. saves preserves state of the physical device.
 
-#### [UnrealTextureOCR](https://github.com/DianaAssistant/UnrealTextureOCR) [ :octocat:](x-github-client://openRepo/https://github.com/DianaAssistant/UnrealTextureOCR)
-`git@github.com:DianaAssistant/UnrealTextureOCR.git`
-
-
-UnrealTextureOCR: windows, hololens 2, android
 
 #### [UnrealRDPClient](https://github.com/DianaAssistant/UnrealRDPClient) [ :octocat:](x-github-client://openRepo/https://github.com/DianaAssistant/UnrealRDPClient)
 `git@github.com:DianaAssistant/UnrealRDPClient.git`
