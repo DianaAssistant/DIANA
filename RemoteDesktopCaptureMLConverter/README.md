@@ -4,9 +4,17 @@ RemoteDesktopCaptureMLConverter
 
 ## OCR project in ReDemPtion
 
-[link](https://github.com/DianaAssistant/redemption/tree/future/projects/ocr1)
+[link](../redemption/projects/ocr1/README.md)
 
-## From [redemption](https://github.com/DianaAssistant/redemption/README.md#Convert .mwrm/.wrm capture to video)
+from it's [Makefile](../redemption/projects/ocr1/Makefile)
+```
+learning: learning.cc
+    $(CXX) $^ -I../../src/capture/ocr/ -I../../modules/ppocr/includes/mln -O2 -std=c++11 -o $@
+```
+
+
+
+## From [redemption](../redemption/projects/ocr1/README.md#Convert)
 ### Convert .mwrm/.wrm capture to video
 
 `.mwrm` and `.wrm` are native capture formats in `capture_flags=2` in `rdpproxy.ini`.
