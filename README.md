@@ -17,9 +17,18 @@ A voice/text controlled AI assistant that learns from its user usage of iOS/Andr
 
 ### Login into Google Accounts
 
+## Usage
+
 ## Architecture
 
-User :user: runs an [app](#UnrealRDPClient) on device :iphone: :computer: :glasses: . It connects to server :server: that runs [broker service](#PurposeRemoteDesktopSessionWebBroker). User presses "start new session" button. App asks him about purpose of the session. After response, RDP session from user device to remote Adroid phone running [RDP server that shows camera feed and translates mouse/key commands](#AndroidCameraUSBGadgetRDPServer) to the USB connected to the iOS device as USB peripheral.
+## Architecture/Usage
+
+User :older_woman: runs an [app](#UnrealRDPClient) on device :robot: :apple: :iphone: :computer: :eyeglasses: . It connects to server :cloud: that runs [broker service](#PurposeRemoteDesktopSessionWebBroker). User :older_woman:  presses "start new session" button. App asks him about purpose of the session. After response, RDP session from user :older_woman: device to remote :robot: Android :iphone:  phone running [RDP server that shows camera feed and translates mouse/key commands](#AndroidCameraUSBGadgetRDPServer) to the USB connected to the :apple: :iphone: iOS device as USB peripheral.
+
+
+All user :older_woman: actions are logged.   After session is ended, user :older_woman: is presented with choice of storing session as routine. User :older_woman: is offered with a choice of marking parameters in session description as a typed wildcards.
+
+In future, if user :older_woman: starts a new session and sets its purpose to be similiar as purposes of sessions of the past, [app](#UnrealRDPClient)  :robot: :apple: :iphone: :computer: :eyeglasses: will give user :older_woman: an option to execute stored routine for user.
 
 
 ### Components
