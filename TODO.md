@@ -21,8 +21,11 @@ https://docs.metaflow.org/v/r/getting-started/install
 
 ### mac mini
 
-- connected amd egpu with jupiter
-- conected ipad mini
+SETUP UBUNTU
+https://docs.metaflow.org/v/r/getting-started/install
+
+- connected ANY egpu with jupiter CUDA
+- conected ipad mini rdp
 
 # software 
 
