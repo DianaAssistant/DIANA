@@ -14,7 +14,7 @@ learning: learning.cc
 
 
 
-## From [redemption](../redemption/projects/ocr1/README.md#Convert)
+## From [redemption](../redemption/README.md#convert-mwrmwrm-capture-to-video)
 ### Convert .mwrm/.wrm capture to video
 
 `.mwrm` and `.wrm` are native capture formats in `capture_flags=2` in `rdpproxy.ini`.
